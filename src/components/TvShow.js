@@ -1,14 +1,15 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 
 function TvShow(props) {
     return (
-      <div className="divItem">
+      <Link to='/details' className="divItem">
             <img src={props.image} alt={`${props.name} logo`}/>
             <div className="overlay">
               <h1>{props.name}</h1>
             </div>
-      </div>
+      </Link>
     );
   }
 

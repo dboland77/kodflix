@@ -7,7 +7,7 @@ import GOT from "../images/GOT.jpg";
 import TheWire from "../images/TheWire.jpg";
 import WalkingDead from "../images/WalkingDead.jpg";
 
-function Technologies() {
+function Gallery() {
   return (
     <div>
       <div className="container">
@@ -24,4 +24,4 @@ function Technologies() {
   );
 }
 
-export default Technologies;
+export default Gallery;
