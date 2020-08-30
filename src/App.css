@@ -15,11 +15,15 @@ img {
 }
 
 .container {
-  display: flex;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .divItem {
-  flex: 1;
+  /* flex: 1;
+  flex-basis: 120px; */
   padding: 0;
   border: 1px solid green;
   position: relative;
@@ -29,11 +33,11 @@ img {
 .overlay {
   transition: bottom cubic-bezier(0.42, 0, 1, 1.57) 1s;
   position: absolute;
-  bottom: -100px;
-  left:0;
+  bottom: -200px;
+  left: 0;
   width: 100%;
   background-color: red;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .divItem:hover .overlay {
@@ -43,9 +47,4 @@ img {
 
 h1 {
   text-emphasis: e;
-}
-@media only screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
 }

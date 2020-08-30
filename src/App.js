@@ -9,7 +9,9 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={Gallery} />
-        <Route exact path="/details" component={Details} />
+        <Route exact path="/:details" component={Details} />
+        {/* The : after the slash is like a wildcard operator and will
+        navigate to the component regardless */}
       </div>
     </Router>
   );
