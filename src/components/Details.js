@@ -4,23 +4,19 @@ import { Link } from "react-router-dom";
 export default class Details extends React.Component {
   constructor() {
     super();
-    debugger;
     this.state = {
-      welcomeMessage: "Welcome to the details page, WIP!!",
+      welcomeMessage: "Hello, this will be the details page for each Movie or TV Show :)",
     };
   }
 
   componentDidMount() {
-    debugger;
     setTimeout(() => {
-      debugger;
       this.setState({
-        welcomeMessage: "The best is yet to come",
+        welcomeMessage: "Coming soon!",
       });
     }, 3000);
   }
   render() {
-    debugger;
     return (
       <div>
         <h1>{this.state.welcomeMessage}</h1>
