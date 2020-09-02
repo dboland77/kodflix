@@ -1,27 +1,43 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import getGallery from "./Gallery-get";
+import './Details.css';
 
 export default class Details extends React.Component {
   constructor() {
     super();
     this.state = {
-      welcomeMessage: "Hello, this will be the details page for each Movie or TV Show :)",
+      movie: {}
     };
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        welcomeMessage: "Coming soon!",
-      });
-    }, 3000);
-  }
+    let movieId = this.props.match.params.movieId;
+    let movie = getGallery()
+        .find( (movie) =>  movie.id === movieId);
+      this.setState({movie});
+    };
+  
   render() {
-    return (
-      <div>
-        <h1>{this.state.welcomeMessage}</h1>
+    if(this.state.movie === undefined) {
+      return <Redirect to="not-found"/>
+    }
+    else {
+      return (
+        <div className='Details'>
+        <h1>{this.state.movie.name}</h1>
+        <div className = 'content'>
+          <div className = "text">
+            <div>{this.state.movie.synopsis}</div>
+          </div>
+          <img 
+            className = "image" 
+            src={this.state.movie.image}
+            alt = {this.state.movie.name}/>
+        </div>
         <Link to="/"> Back to home page </Link>
       </div>
-    );
+          );
+      }
   }
 }
