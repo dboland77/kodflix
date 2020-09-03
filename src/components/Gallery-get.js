@@ -12,7 +12,7 @@ export default function getGallery(){
           {name:"Death Note", image:DeathNote, id : "DeathNote", synopsis: "An intelligent high school student goes on a secret crusade to eliminate criminals from the world after discovering a notebook capable of killing anyone whose name is written into it."},
           {name:"Game of Thrones", image:GOT, id : "GameOfThrones", synopsis: "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia."},
           {name:"The Walking Dead", image:WalkingDead, id : "WalkingDead", synopsis: "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive.."},
-          {name:"The Wire", image:TheWire, id : "Wire"}
+          {name:"The Wire", image:TheWire, id : "Wire", synopsis: " In the drug-ridden streets of West Baltimore, there are good guys and there are bad guys. Sometimes you need more than a badge to tell them apart."}
     ]
   }
   

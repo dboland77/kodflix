@@ -1,5 +1,9 @@
+.Details {
+    background-color: rgb(116, 132, 228);
+}
+
 .Details .content {
-    background-color: yellow;
+    background-color: rgb(116, 132, 228);
     display: flex;
 }
 

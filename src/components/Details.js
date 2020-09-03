@@ -35,7 +35,7 @@ export default class Details extends React.Component {
             src={this.state.movie.image}
             alt = {this.state.movie.name}/>
         </div>
-        <Link to="/"> Back to home page </Link>
+          <Link to="/"> Back to home page </Link>
       </div>
           );
       }
